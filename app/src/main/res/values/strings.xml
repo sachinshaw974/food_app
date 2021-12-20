@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Food App</string>
+    <string-array name="item_name">
+        <item>Select</item>
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+    </string-array>
+    <string-array name="payment">
+        <item>Select payment mode</item>
+        <item>Cash on delivery</item>
+    </string-array>
+</resources>
