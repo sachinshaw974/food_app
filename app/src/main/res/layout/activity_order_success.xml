@@ -16,18 +16,39 @@
         android:text="Order Successful!!! \n\n Enjoy \n your food  \n\n Thank you for ordering."
         android:gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="120dp"
         android:textColor="#000000"
         android:textSize="22dp"
         />
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t1"
+        android:layout_centerHorizontal="true"
+        android:text="Order ID :"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"/>
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t2"
+        android:layout_centerHorizontal="true"
+        android:text="Save this order id for future references."
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="14dp"/>
 
     <Button
         android:id="@+id/b1"
         android:layout_width="170dp"
         android:layout_height="70dp"
-        android:layout_below="@+id/t1"
+        android:layout_below="@+id/t3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#4CAF50"
         android:text="Go to homepage."
         android:textColor="#000000"
@@ -36,10 +57,10 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="250dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_below="@+id/b1"
         android:layout_marginTop="24dp"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/download" />
+        app:srcCompat="@drawable/img" />
 
 </RelativeLayout>

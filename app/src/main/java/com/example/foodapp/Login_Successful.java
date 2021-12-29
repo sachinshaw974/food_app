@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class Login_Successful extends AppCompatActivity {
 
-    Button b1;
+    Button b1,b2,b3;
     SharedPreferences prf;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +41,28 @@ public class Login_Successful extends AppCompatActivity {
     }*/
 
         b1=(Button)findViewById(R.id.b1);
+        b2=(Button)findViewById(R.id.b2);
+        b3=(Button)findViewById(R.id.b3);
         prf = getSharedPreferences("user_details",MODE_PRIVATE);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openac4();
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openac5();
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openac6();
             }
         });
 
@@ -79,9 +95,20 @@ public class Login_Successful extends AppCompatActivity {
     }
 
     public void openac4(){
-        Intent intent=new Intent(this,Order_food.class);
+        Intent intent=new Intent(this,Buy_food.class);
         startActivity(intent);
     }
+
+    public void openac5(){
+        Intent intent=new Intent(this,Search_order.class);
+        startActivity(intent);
+    }
+
+    public void openac6(){
+        Intent intent=new Intent(this,GiveFeedback.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onBackPressed() {
