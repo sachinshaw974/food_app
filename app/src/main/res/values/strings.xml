@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Food App</string>
+    <string name="app_name">EATMORE</string>
     <string-array name="item_name">
         <item>Select</item>
         <item>Item 1</item>
