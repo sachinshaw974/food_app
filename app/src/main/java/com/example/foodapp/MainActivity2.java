@@ -7,7 +7,6 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.*;
 import android.os.Bundle;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -158,7 +157,6 @@ public class MainActivity2 extends AppCompatActivity  {
     public static boolean
     isValidPassword(String password)
     {
-
         // Regex to check valid password.
         String regex = "^(?=.*[0-9])"
                 + "(?=.*[a-z])(?=.*[A-Z])"

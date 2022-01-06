@@ -49,8 +49,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:hint="Password"
-
-
         android:inputType="textPassword" />
 
     <ImageView
@@ -65,7 +63,6 @@
         android:layout_below="@+id/et2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-
         android:src="@drawable/hidden" />
 
     <EditText
