@@ -5,14 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EATMORE"
+        android:fontFamily="@font/thenautigalbold"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        />
+
+    <ImageView
+        android:id="@+id/i1"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/t2"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/food2" />
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+
+        android:fontFamily="@font/thenautigalbold"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:layout_below="@+id/i1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
 
     <EditText
         android:id="@+id/et1"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/t3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="24dp"
         android:hint="Username"
         android:inputType="textPersonName" />
 

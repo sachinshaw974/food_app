@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Search_order extends AppCompatActivity {
 Button b1;
 EditText et1;
@@ -28,10 +31,12 @@ DBHelper_Order DB;
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(et1.getText().toString().isEmpty())
-                    et1.setError("*Please Enter your order id");
+                String n=et1.getText().toString();
+                if(is_valid(n)){
 
-                else{
+
+
+
 
 
 
@@ -65,11 +70,18 @@ DBHelper_Order DB;
 
 
 
-                }
+
                 et1.getText().clear();
 
 
             }
+                else{et1.setError("*Please enter your valid phone no.");}
+            }
         });
+    }
+    public  static boolean is_valid(String str){
+        Pattern ptrn=Pattern.compile("[6-9][0-9]{9}");
+        Matcher match =ptrn.matcher(str);
+        return (match.find()&&match.group().equals(str));
     }
 }

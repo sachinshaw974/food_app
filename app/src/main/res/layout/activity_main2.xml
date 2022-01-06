@@ -6,13 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Registration Form"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:textColor="#000000"
+        android:background="#4CAF50"
+        android:textSize="35dp"
+        />
     <EditText
         android:id="@+id/et1"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/t2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="16dp"
         android:hint="Full Name"
         android:inputType="textPersonName" />
 

@@ -13,7 +13,6 @@
         <activity android:name=".GiveFeedback" />
         <activity android:name=".Confirm_order" />
         <activity android:name=".Buy_food" />
-        <activity android:name=".Select_item" />
         <activity
             android:name=".IntroActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -25,7 +24,6 @@
         </activity>
         <activity android:name=".Admin_Page" />
         <activity android:name=".Order_success" />
-        <activity android:name=".Order_food" />
         <activity android:name=".Login_Successful" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity" />

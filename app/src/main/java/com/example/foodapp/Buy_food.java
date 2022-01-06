@@ -1,7 +1,6 @@
 package com.example.foodapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,17 +11,9 @@ public class Buy_food extends AppCompatActivity {
     Button b1,b2,b3,b4;
     EditText q1,q2,q3,q4;
     public static final String EXTRA_q1 = "com.example.foodapp.q1";
-
-
     public static final String EXTRA_pro1 = "";
-
-
-    public static final String EXTRA_p1 = "0";
-
-
+    public static final String EXTRA_p1 = "com.example.foodapp.p1";
     public static final String EXTRA_amt1 = "0";
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +58,9 @@ public class Buy_food extends AppCompatActivity {
 
         Intent intent=new Intent(Buy_food.this,Confirm_order.class);
         q1=(EditText)findViewById(R.id.q1);
+        q2=(EditText)findViewById(R.id.q2);
+        q3=(EditText)findViewById(R.id.q3);
+        q4=(EditText)findViewById(R.id.q4);
         if(q1.getText().toString().isEmpty())
             q1.setError("Error");
         else {
@@ -77,13 +71,19 @@ public class Buy_food extends AppCompatActivity {
             intent.putExtra(EXTRA_p1, "150");
             intent.putExtra(EXTRA_amt1, String.valueOf(amt));
             q1.getText().clear();
+            q2.getText().clear();
+            q3.getText().clear();
+            q4.getText().clear();
             startActivity(intent);
         }
     }
 
     public void openac2(){
         Intent intent=new Intent(this,Confirm_order.class);
+        q1=(EditText)findViewById(R.id.q1);
         q2=(EditText)findViewById(R.id.q2);
+        q3=(EditText)findViewById(R.id.q3);
+        q4=(EditText)findViewById(R.id.q4);
         if(q2.getText().toString().isEmpty())
             q2.setError("Error");
         else {
@@ -93,14 +93,20 @@ public class Buy_food extends AppCompatActivity {
             intent.putExtra(EXTRA_pro1, "Burger");
             intent.putExtra(EXTRA_p1, "100");
             intent.putExtra(EXTRA_amt1, String.valueOf(amt));
+            q1.getText().clear();
             q2.getText().clear();
+            q3.getText().clear();
+            q4.getText().clear();
             startActivity(intent);
         }
     }
 
     public void openac3(){
         Intent intent=new Intent(this,Confirm_order.class);
+        q1=(EditText)findViewById(R.id.q1);
+        q2=(EditText)findViewById(R.id.q2);
         q3=(EditText)findViewById(R.id.q3);
+        q4=(EditText)findViewById(R.id.q4);
         if(q3.getText().toString().isEmpty())
             q3.setError("Error");
         else {
@@ -110,13 +116,19 @@ public class Buy_food extends AppCompatActivity {
             intent.putExtra(EXTRA_pro1, "Pasta");
             intent.putExtra(EXTRA_p1, "250");
             intent.putExtra(EXTRA_amt1, String.valueOf(amt));
+            q1.getText().clear();
+            q2.getText().clear();
             q3.getText().clear();
+            q4.getText().clear();
             startActivity(intent);
         }
     }
 
     public void openac4(){
         Intent intent=new Intent(this,Confirm_order.class);
+        q1=(EditText)findViewById(R.id.q1);
+        q2=(EditText)findViewById(R.id.q2);
+        q3=(EditText)findViewById(R.id.q3);
         q4=(EditText)findViewById(R.id.q4);
         if(q4.getText().toString().isEmpty())
             q4.setError("Error");
@@ -127,6 +139,9 @@ public class Buy_food extends AppCompatActivity {
             intent.putExtra(EXTRA_pro1, "Oreo Shake");
             intent.putExtra(EXTRA_p1, "200");
             intent.putExtra(EXTRA_amt1, String.valueOf(amt));
+            q1.getText().clear();
+            q2.getText().clear();
+            q3.getText().clear();
             q4.getText().clear();
             startActivity(intent);
         }
