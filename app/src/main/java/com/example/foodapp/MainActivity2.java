@@ -74,8 +74,27 @@ public class MainActivity2 extends AppCompatActivity  {
                         if (addr.getText().toString().isEmpty())
                             addr.setError("*Please enter your address");
                     } else {
+                        if ((is_emailValid(eml)==false) && (is_valid(n)==false) && (isValidPassword(pas)==false)){
 
-                        if (is_emailValid(eml) || is_valid(n) ||isValidPassword(pas)) {
+                            pass.setError("*Please enter your valid pass \n " +
+                                    "It contains at least 8 characters and at most 20 characters.\n" +
+                                    "It contains at least one digit.\n" +
+                                    "It contains at least one upper case alphabet.\n" +
+                                    "It contains at least one lower case alphabet.\n" +
+                                    "It contains at least one special character which includes !@#$%&*()-+=^.\n" +
+                                    "It doesn’t contain any white space.");
+
+
+                            email.setError("*Please enter your valid email-id");
+
+
+                            phone.setError("*Please enter your valid phone number");
+
+
+                        }
+
+                        if (is_emailValid(eml) || is_valid(n) || isValidPassword(pas)) {
+
 
                             if (is_emailValid(eml) && is_valid(n) && isValidPassword(pas)) {
 
@@ -106,27 +125,33 @@ public class MainActivity2 extends AppCompatActivity  {
                                 addr.getText().clear();
 
 
-                            }
-                            else  {
+                            } else {
 
 
-
-                                if ((is_emailValid(eml)==false) || (is_valid(n)==false) ||(isValidPassword(pas)==false)){
-                                    if(isValidPassword(pas)==false)
-                                    {pass.setError("*Please enter your valid pass \n It contains at least 8 characters and at most 20 characters.\n" +
+                                //if ((is_emailValid(eml)==false) || (is_valid(n)==false) ||(isValidPassword(pas)==false)){
+                                if (isValidPassword(pas) == false) {
+                                    pass.setError("*Please enter your valid pass \n " +
+                                            "It contains at least 8 characters and at most 20 characters.\n" +
                                             "It contains at least one digit.\n" +
                                             "It contains at least one upper case alphabet.\n" +
                                             "It contains at least one lower case alphabet.\n" +
                                             "It contains at least one special character which includes !@#$%&*()-+=^.\n" +
-                                            "It doesn’t contain any white space.");}
-                                    if(is_emailValid(eml)==false)
-                                    {email.setError("*Please enter your valid email-id");}
-                                    if(is_valid(n)==false)
-                                    {phone.setError("*Please enter your valid phone number");}
-
+                                            "It doesn’t contain any white space.");
+                                }
+                                if (is_emailValid(eml) == false) {
+                                    email.setError("*Please enter your valid email-id");
+                                }
+                                if (is_valid(n) == false) {
+                                    phone.setError("*Please enter your valid phone number");
                                 }
 
+
+
                             }
+
+
+                        //}
+
 
                         }
                     }
