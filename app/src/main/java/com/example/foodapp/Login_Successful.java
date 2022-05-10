@@ -12,10 +12,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+
 public class Login_Successful extends AppCompatActivity {
 
     Button b1,b2,b3;
     SharedPreferences prf;
+
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +78,23 @@ public class Login_Successful extends AppCompatActivity {
             }
         });
 
+
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(this,gso);
+
+
+
+    }
+
+    //google sign-out
+    void signOut(){
+        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(Task<Void> task) {
+                finish();
+                openac1();
+            }
+        });
     }
 
 
@@ -85,6 +114,7 @@ public class Login_Successful extends AppCompatActivity {
                 editor.clear();
                 editor.commit();
                 openac1();
+                signOut();
             }
         }
         return super.onOptionsItemSelected(item);

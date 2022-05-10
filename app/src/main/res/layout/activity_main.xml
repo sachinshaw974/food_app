@@ -88,13 +88,22 @@
         android:backgroundTint="#4CAF50"
         android:text="Login" />
 
-    <TextView
-        android:id="@+id/t1"
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/b1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_in_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
         android:backgroundTint="#000000"
         android:text="Not a member?"
         android:textColor="#000000" />
