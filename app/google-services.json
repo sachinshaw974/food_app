@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "324079210602",
+    "project_id": "eatmore-349806",
+    "storage_bucket": "eatmore-349806.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324079210602:android:62fabca416ee8d8b98fa13",
+        "android_client_info": {
+          "package_name": "com.example.foodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324079210602-o1shc54kmadqt67kkfevefq7l9hhcdns.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodapp",
+            "certificate_hash": "b476529a609fb0be9d314e48d3605734276db6e7"
+          }
+        },
+        {
+          "client_id": "324079210602-h164fjihielopq9rt6eopeerdr789gdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPrELO3LNSu3qf8nIA8cvMEDvv5xaImvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324079210602-h164fjihielopq9rt6eopeerdr789gdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

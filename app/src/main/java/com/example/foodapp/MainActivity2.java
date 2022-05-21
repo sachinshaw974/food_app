@@ -49,6 +49,8 @@ public class MainActivity2 extends AppCompatActivity  {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 String n = phone.getText().toString();
                 String eml = email.getText().toString();
                 String pas = pass.getText().toString();
@@ -108,12 +110,17 @@ public class MainActivity2 extends AppCompatActivity  {
                                 String addrtxt = addr.getText().toString();
 
 
+
+
                                 Boolean checkinsertdata = DB.insertdata(nametxt, unametxt, passtxt, emailtxt, phonetxt, citytxt, addrtxt);
                                 if (checkinsertdata == true) {
-                                    Toast.makeText(MainActivity2.this, "Registration Complete.", Toast.LENGTH_SHORT).show();
-                                    openac1();
+
+
+                                    Toast.makeText(MainActivity2.this, "Enter the OTP.", Toast.LENGTH_SHORT).show();
+                                    openac2(phonetxt);
+
                                 } else
-                                    Toast.makeText(MainActivity2.this, "Not registered.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity2.this, "Registration Failed.", Toast.LENGTH_SHORT).show();
 
 
                                 name.getText().clear();
@@ -170,6 +177,14 @@ public class MainActivity2 extends AppCompatActivity  {
 
     }
 
+    public void openac2(String phone)
+    {
+        Intent intent=new Intent(this,ManageOtp.class);
+
+        intent.putExtra("mobile","+91"+phone);
+
+        startActivity(intent);
+    }
     public void openac1(){
         Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
